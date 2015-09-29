@@ -69,3 +69,7 @@ function buyProduct(bookName) {
     $("#buyForm").show();
     console.log(" book name = "+ bookName);
 }
+
+function boughtProduct() {
+    $("#buyForm").hide();
+}
