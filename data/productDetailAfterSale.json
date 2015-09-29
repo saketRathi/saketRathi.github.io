@@ -1,0 +1,64 @@
+[
+  {
+    "imageName": "book1.jpeg",
+    "productName": "Tell me a Story",
+    "originalPrice": "Rs 175",
+    "discount": "60",
+    "discountedPrice": "Rs 70"
+  },
+
+  {
+    "imageName": "book2.jpeg",
+    "productName": "It Started with a Friend Request",
+    "originalPrice": "Rs 185",
+    "discount": "10",
+    "discountedPrice": "Rs 166"
+  },
+
+  {
+    "imageName": "book3.jpeg",
+    "productName": "GREY: Fifthy Shades of  Grey",
+    "originalPrice": "Rs 449",
+    "discount": "15",
+    "discountedPrice": "Rs 381"
+  },
+
+  {
+    "imageName": "book4.jpeg",
+    "productName": "Few Things Left Unsaid",
+    "originalPrice": "Rs 149",
+    "discount": "25",
+    "discountedPrice": "Rs 111"
+  },
+
+  {
+    "imageName": "book1.jpeg",
+    "productName": "Tell me a Story",
+    "originalPrice": "Rs 175",
+    "discount": "20",
+    "discountedPrice": "Rs 140"
+  },
+
+  {
+    "imageName": "book2.jpeg",
+    "productName": "It Started with a Friend Request",
+    "originalPrice": "Rs 185",
+    "discount": "10",
+    "discountedPrice": "Rs 166"
+  },
+
+  {
+    "imageName": "book3.jpeg",
+    "productName": "GREY: Fifthy Shades of  Grey",
+    "originalPrice": "Rs 449",
+    "discount": "15",
+    "discountedPrice": "Rs 381"
+  },
+  {
+    "imageName": "book4.jpeg",
+    "productName": "Few Things Left Unsaid",
+    "originalPrice": "Rs 149",
+    "discount": "25",
+    "discountedPrice": "Rs 111"
+  }
+]
