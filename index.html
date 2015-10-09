@@ -22,7 +22,7 @@
     <img class="flash-sale-image" src="./images/FlashSaleImage.jpg"/>
 </div>
 
-<div class="flash-sale-overlay" id="buyForm">
+<div class="flash-sale-overlay" id="buyForm" onclick="removeForm(event)">
     <form class="form-horizontal flash-sale-image">
         <fieldset>
             <div class="form-group">
@@ -38,9 +38,10 @@
                 </div>
             </div>
 
+            <div id="productToBuy" hidden=""></div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-primary" onClick="boughtProduct()">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="buyButton" onClick="boughtProduct()">Submit</button>
                 </div>
             </div>
         </fieldset>

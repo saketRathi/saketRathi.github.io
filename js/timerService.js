@@ -68,8 +68,26 @@ function changeTime() {
 function buyProduct(bookName) {
     $("#buyForm").show();
     console.log(" book name = "+ bookName);
+    $("#productToBuy").text(bookName);
 }
 
 function boughtProduct() {
     $("#buyForm").hide();
+    console.log(" name = "+ $("#name").val());
+    console.log(" quantity = "+ $("#quantity").val());
+    console.log(" product to buy = "+ $("#productToBuy").text());
+    ga('send', {
+        hitType: 'buy',
+        eventCategory: inFlashSale? "Flash Sale" : "Normal",
+        eventAction: $("#productToBuy").text(),
+        eventLabel: $("#name").val() + " - " + $("#quantity").val()
+    });
+}
+
+function removeForm(e) {
+        var t = (e.target);
+    console.log(" t = "+t);
+        if(t!= $("#name").get(0) && t!=$("#quantity").get(0) && t!=$("#buyButton").get(0) ) {
+            $("#buyForm").hide();
+        }
 }
