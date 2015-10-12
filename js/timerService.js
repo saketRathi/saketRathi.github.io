@@ -87,7 +87,7 @@ function boughtProduct() {
 function removeForm(e) {
         var t = (e.target);
         console.log(" t = "+t);
-        if(t!= $("#name").get(0) && t!=$("#quantity").get(0) && t!=$("#buyButton").get(0) ) {
+        if(t!= $("#name").get(0) && t!=$("#quantity").get(0) && t!=$("#buyButton").get(0)  && t!= $("#address").get(0)) {
             $("#buyForm").hide();
         }
 }
