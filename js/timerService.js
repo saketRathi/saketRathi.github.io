@@ -77,10 +77,10 @@ function boughtProduct() {
     console.log(" quantity = "+ $("#quantity").val());
     console.log(" product to buy = "+ $("#productToBuy").text());
     ga('send', {
-        hitType: 'buy',
-        eventCategory: inFlashSale? "Flash Sale" : "Normal",
-        eventAction: $("#productToBuy").text(),
-        eventLabel: $("#name").val() + " - " + $("#quantity").val()
+        hitType: inFlashSale? "Flash Sale" : "Normal",
+        eventCategory:  $("#productToBuy").text(),
+        eventAction: $("#quantity").val(),
+        eventLabel: $("#name").val()
     });
 }
 
