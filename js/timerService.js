@@ -34,7 +34,7 @@ function changeTime() {
     var minutes = parseInt($("#minutes").text());
     var seconds = parseInt($("#seconds").text());
 
-    console.log("minutes = "+ minutes + "seconds = "+seconds);
+   // console.log("minutes = "+ minutes + "seconds = "+seconds);
     if(minutes === 0 && seconds === 0) {
         clearInterval(interval);
         $("#productGrid").attr("src", "./html/productGrid.html");
@@ -73,21 +73,20 @@ function buyProduct(bookName) {
 
 function boughtProduct() {
     $("#buyForm").hide();
+    //console.log(" GA is = " + GA);
+    console.log(" normal wala ga is = " + ga);
     console.log(" name = "+ $("#name").val());
     console.log(" quantity = "+ $("#quantity").val());
     console.log(" product to buy = "+ $("#productToBuy").text());
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-68219561-1', 'auto');
-    ga('send', {
-        hitType: inFlashSale? "Flash Sale" : "Normal",
-        eventCategory:  $("#productToBuy").text(),
-        eventAction: $("#quantity").val(),
-        eventLabel: $("#name").val()
-    });
+    //GA('send', {
+    //    hitType: inFlashSale? "Flash Sale" : "Normal",
+    //    eventCategory:  $("#productToBuy").text(),
+    //    eventAction: $("#quantity").val(),
+    //    eventLabel: $("#name").val()
+    //});
+
+    ga('send',"Flash Sale" , "productToBuy", "quantity", "name");
 }
 
 function removeForm(e) {
