@@ -73,16 +73,15 @@ function buyProduct(bookName) {
 
 function boughtProduct() {
     $("#buyForm").hide();
+    var productName = $("#productToBuy").text();
+    var quantity = $("#quantity").val();
+    var flashSale = inFlashSale? "Flash Sale" : "Normal";
+
     console.log(" name = "+ $("#name").val());
     console.log(" quantity = "+ $("#quantity").val());
     console.log(" product to buy = "+ $("#productToBuy").text());
 
-    ga('send', {
-        hitType: 'event',
-        eventCategory:  inFlashSale? "Flash Sale" : "Normal",
-        eventAction: $("#quantity").val(),
-        eventLabel:$("#productToBuy").text()
-    });
+    ga('send', 'event', flashSale , productName , quantity);
 
 }
 
