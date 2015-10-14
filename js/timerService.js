@@ -73,20 +73,17 @@ function buyProduct(bookName) {
 
 function boughtProduct() {
     $("#buyForm").hide();
-    //console.log(" GA is = " + GA);
-    console.log(" normal wala ga is = " + ga);
     console.log(" name = "+ $("#name").val());
     console.log(" quantity = "+ $("#quantity").val());
     console.log(" product to buy = "+ $("#productToBuy").text());
 
-    //GA('send', {
-    //    hitType: inFlashSale? "Flash Sale" : "Normal",
-    //    eventCategory:  $("#productToBuy").text(),
-    //    eventAction: $("#quantity").val(),
-    //    eventLabel: $("#name").val()
-    //});
+    ga('send', {
+        hitType: 'event',
+        eventCategory:  inFlashSale? "Flash Sale" : "Normal",
+        eventAction: $("#quantity").val(),
+        eventLabel:$("#productToBuy").text()
+    });
 
-    ga('send',"Flash Sale" , "productToBuy", "quantity", "name");
 }
 
 function removeForm(e) {
